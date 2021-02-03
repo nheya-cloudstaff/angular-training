@@ -1,0 +1,45 @@
+<div [ngStyle]="{'margin-top': '20px'}" *ngIf="allData">
+  <h4>[{{allData.template.alias}}] {{allData.template.name}}</h4>
+</div>
+<br />
+<br />
+<div class="row">
+  <div class="col-md-3">
+    Submitted At
+  </div>
+  <div class="col-md-3">
+    Assignee
+  </div>
+  <div class="col-md-3">
+    Status
+  </div>
+  <div class="col-md-3">
+    Priority
+  </div>
+</div>
+<br />
+<div class="row" [ngStyle]="{'color': 'rgba(0,0,0,.54)'}">
+  <div class="col-md-3">
+    {{allData.assigned_at}}
+  </div>
+  <div class="col-md-3">
+    {{allData.assignee.alias}}
+  </div>
+  <div class="col-md-3" style="text-transform: capitalize">
+    {{allData.endorsed_primary.status}}
+  </div>
+  <div class="col-md-3" style="text-transform: capitalize">
+    {{allData.endorsed_primary.priority}}
+  </div>
+</div>
+<hr />
+<div class="row" [ngStyle]="{'color': 'rgba(0,0,0,.54)'}">
+  <div class="col-md-12">
+    Comment
+  </div>
+</div>
+<div class="row" [ngStyle]="{'color': 'rgba(0,0,0,.54)'}">
+  <div class="col-md-12">
+    {{allData.data.Comment.value}}
+  </div>
+</div>

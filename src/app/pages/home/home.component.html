@@ -1,0 +1,17 @@
+<div *ngIf="!isLogged">
+  <div class="form-group" [ngStyle]="{'margin-top': '20px'}">
+    <div id="username" class="pt-20">
+      <label for="username">Username</label>
+      <input [(ngModel)]="logins.username" class="form-control">
+    </div>
+    <div class="password">
+      <label for="password">Password</label>
+      <input type="password" [(ngModel)]="logins.password" class="form-control">
+    </div>
+    <br>
+    <div>
+      <button (click)="onLogin()" class="btn btn-info">Login</button>
+    </div>
+  </div>
+</div>
+

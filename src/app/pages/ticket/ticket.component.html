@@ -1,0 +1,26 @@
+<h3 [ngStyle]="{'margin-top': '20px'}">My Tickets</h3>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Priority</th>
+      <th>Status</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let name of allData">
+      <td>
+        <span style="font-weight:600;">[{{name.template.alias}}]</span> {{name.template.name}}
+        <br />
+        <span style="font-weight:400;font-size:12px;">
+        ID: #0{{name.serial}}
+        </span>
+      </td>
+      <td>{{name.priority}}</td>
+      <td>{{name.status}}</td>
+      <td><a class="nav-link" routerLink="/view-ticket/{{name.id}}" routerLinkActive="active">View</a></td>
+    </tr>
+  </tbody>
+</table>

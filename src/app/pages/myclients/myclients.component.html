@@ -1,0 +1,9 @@
+<h3 [ngStyle]="{'margin-top': '20px'}">GROUPS</h3>
+<ul class="list-group">
+  <li *ngFor="let name of allTag" class="list-group-item">{{name.name}}</li>
+</ul>
+
+<h3 [ngStyle]="{'margin-top': '20px'}">Clients</h3>
+<ul class="list-group">
+  <li *ngFor="let name of allClients" class="list-group-item">{{name.name}}</li>
+</ul>
