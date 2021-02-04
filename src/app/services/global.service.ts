@@ -58,7 +58,7 @@ export class GlobalService {
     );
   }
 
-  httpViewTicket(id:string): void {
+  httpViewTicket(id): void {
   const url = 'https://stage-api-ubertickets.cloudstaff.com/v1/tickets/my/' + id;
     const token = this.getToken();
 
