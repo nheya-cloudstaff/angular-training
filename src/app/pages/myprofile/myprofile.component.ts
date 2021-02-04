@@ -10,7 +10,7 @@ import { GlobalService } from 'src/app/services/global.service';
 })
 export class MyprofileComponent implements OnInit {
 
-  profileForm: FormGroup;
+  profileForm: any;
   constructor(private service: GlobalService) {
 
   }
@@ -48,7 +48,7 @@ export class MyprofileComponent implements OnInit {
     });
   }
 
-  fillForm(profile): void {
+  fillForm(profile: any): void {
     this.profileForm.patchValue({
       first_name: profile.meta.first_name,
       last_name: profile.meta.last_name,
